@@ -7,8 +7,17 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/javascript">
+function removeSplChars(inStr) {
+    <%System.out.println ("Hello");%>
+                inStr = inStr.replace("[", "");
+                inStr= inStr.replace("]","");
+                 
+                return inStr;
+}
+   
  function getreviews(plan) {
 	 alert(plan);	
+     System.out.println ("test");
 	 $.get("retrievereviews",{plan:plan},function(data){
 System.out.println(data);
      $("#displayreviews").html(data);
@@ -17,9 +26,11 @@ System.out.println(data);
  }
 
 </script>
+    
 <style>
 body {
   font-family: Times New Roman, Times, serif;
+  background-image: url("https://independenttravelcats.com/wp-content/uploads/2018/03/Travel-planning.jpg");
 }
 
 * {
@@ -90,17 +101,18 @@ ${message1}
 <div class="container">
   <div style="text-align:center">
 
-    <h2>Plan details</h2><br />
+    <h2>Plan details </h2><br />
   
-
-        <h4>Plan Name:  ${SpecificTravelPlan.plan} </h4><br />
+        <%System.out.println ("Hello 123");%>
+        <h4>Plan Name:${SpecificTravelPlan.plan} </h4><br />
   
-        <h4>Country:  ${SpecificTravelPlan.country} </h4><br />
+        <h4>Country:${SpecificTravelPlan.country} </h4><br />
        
-       <h4> Month:  ${SpecificTravelPlan.month} </h4><br /> 
+       <h4> Month:${SpecificTravelPlan.month} </h4><br /> 
        
-       <h4> Budget:  ${SpecificTravelPlan.budget} </h4><br /> 
-       <a href="/selectPlan?travelPlan=${SpecificTravelPlan}">Select This Plan</a>
+       <h4> Budget:${SpecificTravelPlan.budget} </h4><br /> 
+      
+       <a href="/selectPlan?travelPlan="+removeSplChars('${SpecificTravelPlan}')>Select This Plan</a>
       
     </div>
     
@@ -141,6 +153,9 @@ ${message1}
 <style>
 .container {
 clear: both;
+width: 50%;
+height: 100%;
+margin-left: 375px;
 }
 
 </style>

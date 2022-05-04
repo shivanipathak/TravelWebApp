@@ -18,7 +18,7 @@
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <meta name="google-signin-scope" content="profile email">
 <meta name="google-signin-client_id"
-     content="19996480139-hbsng2ng7kfnl9cl4pil2a1m7ulr6pn9.apps.googleusercontent.com">
+     content="447092261765-n2ubsh2g8arusbkdctul4r0a3bo50ff0.apps.googleusercontent.com">
 
 
 </head>
@@ -26,7 +26,8 @@
 <style> 
 #bdy {
     /* The image used */
-    background-image: url("https://images.unsplash.com/uploads/141202616623001715bb7/c1b3b9b0?ixlib=rb-0.3.5&s=0ec689e4a4a33110315bd7846be5bb3e&auto=format&fit=crop&w=1094&q=80");
+    background-image: url("https://asinglewomantraveling.com/wp-content/uploads/2020/11/Website-Planning-Images.jpg");
+    /*https://i.pinimg.com/originals/b4/4c/66/b44c665c88d2d14d1b4a6904bd133acb.gif*/
 	
     /* Full height */
     height: 100%; 
@@ -44,6 +45,29 @@
   color: #eeebe6;
 }
 
+h1.thick {
+  font-weight: bold;
+}
+
+#style{
+font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #000000;
+  border: solid;
+  margin-left: 550px;
+  margin-right:550px;
+}
+
+
+
+#styletext{
+font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #000000;
+
+}
+
+
 </style>
 
 
@@ -55,11 +79,11 @@
  console.log(response);
  if (response.status === 'connected') {
  testAPI();
- } else if (response.status === 'not_authorized') {
- document.getElementById('status').innerHTML = 'Login with Facebook ';
- } else {
- document.getElementById('status').innerHTML = 'Login with Facebook ';
- }
+ } //else if (response.status === 'not_authorized') {
+ //document.getElementById('status').innerHTML = 'Login with Facebook ';
+ //} else {
+ //document.getElementById('status').innerHTML = 'Login with Facebook ';
+ //}
  }
 
  function checkLoginState() {
@@ -98,29 +122,28 @@
  } 
 </script> 
 
-<h1><font font-family="Gill Sans Extrabold", sans-serif >"Live life with no excuses, travel with no regret"-  Oscar Wilde. </font></h1></br>
-<h1> Login Page </h1></br>
+<h1 class="thick"> Login Page </h1></br>
 
 <div class="Login page" id="container1">
-<h1><font color= "white">${message}</font></h1>
+<h1><font type="hidden" color= "white">${message}</font></h1>
 <form method="POST" class="form-horizontal" action="/customlogin">
-<p><b>User Name &ensp;
-<input type="text" id="username" placeholder="Enter User Enter your UserName" name="username"  required></p>
-<p><b>Password &ensp;
+<p id="style"><b>User Name &ensp;
+<input type="text" id="username" placeholder="Enter UserName" name="username"  required></p>
+<p id="style"><b color = black>Password &ensp;
 <input type="password" id="pwd" placeholder="Enter password" name="pwd" required></p>
 <p></p></br>
-<p><b>Select User Type: &ensp;</b></p>
- <input type="radio" name="role" value="user" checked> user&ensp;&ensp;
-  <input type="radio" name="role" value="company">Travel Company
+<p id="styletext"><b>Select User Type: &ensp;</b></p>
+ <input id="styletext"  type="radio" name="role" value="user" checked> <font id="styletext" color= "#000000">User</font>&ensp;&ensp;
+  <input id="styletext" type="radio" name="role" value="company"><font id="styletext" color= "#000000">Travel Company</font>
   <p></p>
-<input type="submit"  class="w3-btn w3-white" name="Login" value="Login">
-<input type="submit" class="w3-btn w3-white" name="Cancle" value="Cancle"><br>
+<input id="styletext" type="submit"  class="w3-btn w3-white" name="Login" value="Login">
+<input id="styletext" type="submit" class="w3-btn w3-white" name="Cancel" value="Cancel"><br>
 
-<a href="/userSignup"><h4><strong><font color= "#eeebe6">New User Register here</font></strong></h4></a>
-<a href="/companySignup"><h4><strong><font color= "#eeebe6">New Company Register here</font></strong></h4></a>
+<a id="styletext" href="/userSignup"><h4><strong><font color= "#000000">New User Register here</font></strong></h4></a>
+<a id="styletext" href="/companySignup"><h4><strong><font color= "#000000">New Company Register here</font></strong></h4></a>
 </div>
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
+<!--  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>-->
 <div id="status">
 </div> 
 <div><a><div class="g-signin2" data-onsuccess="onSignIn"></a></div></br>

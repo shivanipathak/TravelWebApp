@@ -85,8 +85,8 @@ div.desc {
 
 </style>	
 </head>
-	<body background="https://images.pexels.com/photos/386025/pexels-photo-386025.jpeg ">
-	<h2>Welcome ${companyname} </h2>
+	<body background="https://img.freepik.com/free-photo/male-hand-holding-plane-airplane-icon-blue-background-banner-nline-ticket-purchase-travel-icons-about-travel-planning-transportation-hotel-flight-passport-flight-ticket-booking-concept_150455-9915.jpg?w=1380">
+	<h2><b>Welcome ${companyname}</b></h2>
 <div class="w3-container" style="margin-top: 20px; margin-right: 50px;">
 	<form method="POST" action="/logout" >
 	<p align="right">
@@ -139,9 +139,9 @@ div.desc {
 				<button type="submit">Submit</button>
 		</form>		
 	</div>
-	<div class="prediction">
+	<!--  <div class="prediction">
 	<button type="submit"><a target="_blank" href="prediction">Predict</a></button>
-	</div>
+	</div>-->
 	<div class="companytravelplans">
 			<form method="POST" action="/companytravelplans">
 		<input type="hidden" name="companyname" value="${companyname}">

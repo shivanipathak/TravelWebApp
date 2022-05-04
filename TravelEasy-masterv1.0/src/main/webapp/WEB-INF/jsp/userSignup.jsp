@@ -11,7 +11,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body background="https://images.pexels.com/photos/386025/pexels-photo-386025.jpeg"><center>
+<body background="https://asinglewomantraveling.com/wp-content/uploads/2020/11/Website-Planning-Images.jpg"><center>
 <form method="POST" class="form-horizontal" action="/adduser">
 
 <div class="User Signup page">

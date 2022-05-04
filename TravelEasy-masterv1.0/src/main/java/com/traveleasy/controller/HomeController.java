@@ -13,17 +13,14 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.amazonaws.services.polly.model.OutputFormat;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -38,7 +35,6 @@ import com.traveleasy.model.User;
 import com.traveleasy.model.Usertravelplan;
 import com.traveleasy.service.AmazonClientService;
 import com.traveleasy.service.CompanyService;
-import com.traveleasy.service.PollyHelper;
 import com.traveleasy.service.PredictionService;
 import com.traveleasy.service.SignUpService;
 import com.traveleasy.service.UserService;
@@ -79,13 +75,14 @@ public class HomeController {
 	@GetMapping("/getData")
 	public String getData(HttpSession session, ModelMap model) {
 		String custId = (String) session.getAttribute("DynamoUser");
+		System.out.println("Customer is is as follows"+custId);
 		ClientUtils clientUtils = new ClientUtils();
-		String response = clientUtils
-				.sendGetRequest("https://ntfa40vdb2.execute-api.us-east-1.amazonaws.com/Dev/?custId=" + custId);
+		String response = ClientUtils.userName ; 
+        System.out.println("something we are doing"+response);
 		ObjectMapper om = new ObjectMapper();
-		LexUser ru = null;
+		LexUser ru = null ;
 		System.out.println("Response from Dynamo db: " + response);	
-
+		System.out.println("Response from: " + session.getAttribute("lexResp"));	
 		try {
 			ru = om.readValue(response, LexUser.class);
 			System.out.println("Lex Data: "+ru);
@@ -101,10 +98,12 @@ public class HomeController {
 			
 			e.printStackTrace();
 		}
-		
-		String lexUserId = ru.getUserId();
-		String lexCountry = ru.getCountry();
-		String lexMonth = ru.getMonth();
+		String lexUserId="Shivani";
+		String lexCountry="India";
+		String lexMonth="June";
+		//String lexUserId = ru.getUserId();
+		//String lexCountry = ru.getCountry();
+		//String lexMonth = ru.getMonth();
 		//Need edition
 		List<Travelplan> Travelplans = new ArrayList<>();
 		Travelplans =companyService.findTravelPlans(lexCountry, lexMonth);
@@ -256,7 +255,7 @@ public class HomeController {
 			System.out.println("not null");
 			session.setAttribute("usertravelplans", usertravelplans);
 	        session.setAttribute("loggedUser", user);
-	        session.setAttribute("DynamoUser", user.getUsername());
+	        session.setAttribute(" User", user.getUsername());
 	        session.setAttribute("message", "success");
 	        return "redirect:/userHomePage";
 	        }

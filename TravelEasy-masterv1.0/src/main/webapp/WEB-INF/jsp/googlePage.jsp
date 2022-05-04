@@ -8,11 +8,11 @@
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <meta name="google-signin-scope" content="profile email">
 <meta name="google-signin-client_id"
-     content="19996480139-hbsng2ng7kfnl9cl4pil2a1m7ulr6pn9.apps.googleusercontent.com">
+     content="447092261765-n2ubsh2g8arusbkdctul4r0a3bo50ff0.apps.googleusercontent.com">
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Hey on google</h1>
+<h1>Hey on google</h1>s
 
 <h2>Sign In with Google </h2>
 	<br>

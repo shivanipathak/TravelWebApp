@@ -9,7 +9,7 @@
 <style>
 #bdy {
     /* The image used */
-    background-image: url("https://images.unsplash.com/uploads/141202616623001715bb7/c1b3b9b0?ixlib=rb-0.3.5&s=0ec689e4a4a33110315bd7846be5bb3e&auto=format&fit=crop&w=1094&q=80");
+    background-image: url("https://independenttravelcats.com/wp-content/uploads/2018/03/Travel-planning.jpg");
 	
     /* Full height */
     height: 100%; 

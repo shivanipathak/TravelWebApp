@@ -98,7 +98,7 @@ public class CompanyService {
 	/* Edited by chaitrali */
 	public List<Travelplan> findTravelPlans(String lexCountry, String lexMonth) {
 
-		return travelplanRepository.findTravelPlans(lexCountry, lexMonth);
+		return travelplanRepository.findTravelPlans(lexCountry);
 
 	}
 

@@ -33,8 +33,10 @@ input#wisdom {
 
 #bdy {
     /* The image used */
-    background-image: url("https://images.unsplash.com/uploads/141202616623001715bb7/c1b3b9b0?ixlib=rb-0.3.5&s=0ec689e4a4a33110315bd7846be5bb3e&auto=format&fit=crop&w=1094&q=80");
-	
+
+
+    background-image: url("https://thumbs.dreamstime.com/z/world-map-compass-passport-shells-concept-travel-planning-top-view-white-wooden-desk-151491123.jpg");
+	/*https://www.linguise.com/wp-content/uploads/2021/01/translate-travel-agency-website.png*/
     /* Full height */
     height: 100%; 
 
@@ -82,6 +84,61 @@ p.lexError {
 	float: right;
 	background-color: #f77;
 }
+
+h1.thick {
+  font-weight: bold;
+  margin-left: 550px;
+  margin-right: 575px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+  border: solid;
+  padding: 5px 5px;
+  
+  
+}
+
+.button {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 470px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #B3A285;
+  width: 150px;
+  height: 50px;
+  background-color: #B3A285;
+  border: none;
+  border-radius: 15px;
+}
+
+.button:hover {background-color: #B3A285}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.form-submit-button {
+background: #0066A2;
+color: red;
+margin-left: 550px;
+border-style: outset;
+border-color: #0066A2;
+height: 50px;
+width: 100px;
+font: bold15px arial,sans-serif;
+text-shadow: none;
+}
+
+
+
 </style>
 </head>
 
@@ -96,10 +153,10 @@ p.lexError {
 
 
 	<p style="width: 400px; margin-left: 550px">
-	<h1 style="margin-left: 550px">Welcome to TravelEzy!</h1>
+	<h1 class="thick">Travel Planning System</h1>
 	</p>
 	<div id="conversation"
-		style="width: 400px; margin-left: 550px; height: 400px; border: 1px solid #ccc; background-color: #a9d3d7; padding: 4px; overflow: scroll"></div>
+		style="width: 400px; margin-left: 550px; height: 400px; border: 1px solid #ccc; background-color: #F5F5DC; padding: 4px; overflow: scroll"></div>
 	<form id="chatform" align="center" style="margin-top: 10px"
 		onsubmit="return pushChat();">
 		<input type="text" id="wisdom" style="margin-right: 10px" value=""
@@ -109,7 +166,7 @@ p.lexError {
 
 	</form>
 	<br />
-	<br />
+
 
 
 
@@ -119,7 +176,7 @@ p.lexError {
 		<!-- <button type="button" id="getReq" style="margin-left: 500px"
 			class="btn btn-success">Submit</button> -->
 	
-	<a href="/getData"><h4><strong><font color= "white" style="margin-left: 500px" >Submit</font></strong></h4></a>
+	<a class = "button" href="/getData"><h4><strong><font color= "white" style="margin-left: 5px" >Submit</font></strong></h4></a>
 
 	</div>
 
@@ -135,8 +192,8 @@ p.lexError {
 		// Initialize the Amazon Cognito credentials provider
 		AWS.config.region = 'us-east-1'; // Region
 		AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-		// Provide your Pool Id here
-			IdentityPoolId: 'us-east-1:971c9c21-e466-4d96-9d6a-4db8440c7241',
+		 //Provide your Pool Id here
+			IdentityPoolId: 'us-east-1:5264d0c0-7775-4287-a987-6135e9db41f7',
 		});
 
 		var lexruntime = new AWS.LexRuntime();
@@ -165,7 +222,7 @@ p.lexError {
 				// send it to the Lex runtime
 				var params = {
 					botAlias: '$LATEST',
-					botName: 'TravelEasyBot',
+					botName: 'tarveleasyDemo', //Added by Shivani
 					inputText: wisdom,
 					userId: userName,
 					sessionAttributes: sessionAttributes

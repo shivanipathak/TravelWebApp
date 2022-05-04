@@ -7,9 +7,10 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+
 public class ClientUtils {
 
-	
+	public static String userName;
 	public String sendGetRequest(String URL) {
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(URL);
@@ -19,19 +20,19 @@ public class ClientUtils {
 	
 	
 	
-	// public String sendPostRequest(String URL,String jsonPayload) {
+	public String sendPostRequest(String URL,String jsonPayload) {
 
-	//
+	
 
-	// Client client = ClientBuilder.newClient();
+	 Client client = ClientBuilder.newClient();
 
-	// WebTarget target = client.target(URL);
+	 WebTarget target = client.target(URL);
 
-	// Response response = target.request().post(Entity.entity(jsonPayload,
-	// MediaType.APPLICATION_JSON));
+	Response response = target.request().post(Entity.entity(jsonPayload,
+	MediaType.APPLICATION_JSON));
 
-	// return response.readEntity(String.class);
-	// }
+	 return response.readEntity(String.class);
+	 }
 
 
 }

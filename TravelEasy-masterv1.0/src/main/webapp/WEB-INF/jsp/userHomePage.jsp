@@ -21,18 +21,51 @@
 <style>
 
 table {
-	width: 100% !important;	
+	width: 50% !important;	
 }
 
-.dashboardtable{
-width: 100% !important;	
+#dashboardtable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin-left: 300px;
+  width: 50%;
+  border: solid;
+}
+
+#dashboardtable td, #dashboardtable th {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
+#dashboardtable tr:nth-child(even){background-color: #f2f2f2;}
+
+#dashboardtable tr:hover {background-color: #ddd;}
+
+#dashboardtable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+h3.thick {
+  font-weight: bold;
+  margin-left: 12px;
+  font-style: italic;
+}
+
+
+/*.dashboardtable{
+margin-left: 300px;
+width: 50% !important;	
 }
 .dthead {
 	text-align: left;
 }
 .dtr {
 	background-color: #dccdc;
-}
+}*/
 .lex {
 float: right;
 margin: 5% 10%;
@@ -47,10 +80,29 @@ background-color: #4CAF50;
 a {
 text-decoration: none;
 }
+
+#bdy {
+    /* The image used */
+    background-image: url("https://img.freepik.com/free-photo/flat-lay-travel-planning-with-blank-space-travel-itinerary-planner-white-background_41775-495.jpg?w=1060");
+    /*https://i.pinimg.com/originals/b4/4c/66/b44c665c88d2d14d1b4a6904bd133acb.gif*/
+	
+    /* Full height */
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    
+    
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 </style>
 </head>
 <body id="bdy">
-<h2>Welcome ${loggedUser.getUserfirstname()}</h2>
+<h3 class="thick">Welcome ${loggedUser.getUserfirstname()}</h3>
 <div class="previoustravelplans">
 <% 
  if(session.getAttribute("usertravelplans") != null)
@@ -58,8 +110,8 @@ text-decoration: none;
 	 System.out.println("not null");
 	 ArrayList<Usertravelplan> a = (ArrayList<Usertravelplan>)session.getAttribute("usertravelplans"); 
  %>
- <table class="dashboardtable">
-					<thead class="dthead">
+ <table id="dashboardtable">
+					<!--  <thead >-->
 					<tr>
 						<th>Plan name</th>
 						<th>Country</th>
@@ -67,7 +119,7 @@ text-decoration: none;
 						<th>Budget</th>
 						<th>Post Review</th>
 									</tr>
-					</thead>
+					<!--  </thead >-->
 
 <tbody class="dtr">
 <% 
@@ -91,7 +143,7 @@ for(Usertravelplan u : a)
  else
  { %>
 	 <div class="noplans">
-	<%  out.println("not travelled yet"); %>
+	<%  out.println("Not travelled yet"); %>
 	 </div>
  <%   } %>
   
@@ -100,7 +152,7 @@ for(Usertravelplan u : a)
 <div>
 <br /><br /><br />
 <center><form method="GET"  action="/lex1" style="margin-right: 500px">
-<button type="submit" class="w3-btn w3-black">Travel Chat</button> 
+<button type="submit" class="button">Travel Chat</button> 
 </form><center>
 
 </div>
@@ -109,6 +161,28 @@ for(Usertravelplan u : a)
  .noplans {
  text-align: center;
  }
+ .button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
  </style>
  <script>
 	var message = $("h2").text();

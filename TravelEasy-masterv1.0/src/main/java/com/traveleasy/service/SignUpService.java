@@ -3,6 +3,7 @@ package com.traveleasy.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.traveleasy.client.ClientUtils;
 import com.traveleasy.model.User;
 import com.traveleasy.repository.SignUpRepository;
 
@@ -30,7 +31,8 @@ public class SignUpService {
 	public User getuserinfo(String username, String pwd) {
 
 		User user = signUpRepository.findUser(username);
-
+		System.out.println("Signup"+user);
+        ClientUtils.userName=user.getUsername();
 		if (user != null && user.getUserpassword().equals(pwd)) {
 			return user;
 		}

@@ -8,7 +8,7 @@
 <style>
 #bdy {
     /* The image used */
-    background-image: url("https://images.unsplash.com/photo-1483004406427-6acb078d1f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-image: url("https://img.freepik.com/free-photo/male-hand-holding-plane-airplane-icon-blue-background-banner-nline-ticket-purchase-travel-icons-about-travel-planning-transportation-hotel-flight-passport-flight-ticket-booking-concept_150455-9915.jpg?w=1380");
 	
     /* Full height */
     height: 100%; 
@@ -21,26 +21,39 @@
 }
 
 div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
+    
+    /*border: 1px solid #ccc;*/
     float: left;
-    width: 280px;
+    width: 285px;
+    border: solid;
 }
 
-div.gallery:hover {
+/*div.gallery:hover {
     border: 1px solid #777;
-}
+}*/
 
 div.gallery img {
     width: 100%;
     height: auto;
+    border: solid;
+  
+    object-fit: cover;
+   
+    
 }
 
 div.desc {
     padding: 15px;
     text-align: center;
+    font-weight: bold;
+  
 }
 
+#thick {
+  
+  
+  
+}
 
 
 </style>
@@ -62,8 +75,8 @@ div.desc {
     
   </a>
   <div class="desc">${item.plan}</div>
-  <div class="desc"><a href="/getTravelPlanByName?planName=${item.plan}">View</a>                 
-  <a href="/downloadTravelPlanItinerary?itinerary=${item.itineraryimageurl}&companyname=${item.companyusername}&plan=${item.plan}">Download</a></div>
+  <div class="desc"><a href="/getTravelPlanByName?planName=${item.plan}"><button> View</button></a>                 
+  <a href="/downloadTravelPlanItinerary?itinerary=${item.itineraryimageurl}&companyname=${item.companyusername}&plan=${item.plan}"><button>Download</button></a></div>
   </div>
 
    </c:forEach>
