@@ -80,7 +80,7 @@ public class CompanyService {
 		return null;
 	}
 
-	/* Edited by Prathyusha on 5th */
+	/* Edited by Shivani on 5th */
 	public boolean deleteTravelplan(Integer travelplanid) {
 
 		try {
@@ -95,14 +95,14 @@ public class CompanyService {
 		return false;
 	}
 
-	/* Edited by chaitrali */
+	/* Edited by Sravani */
 	public List<Travelplan> findTravelPlans(String lexCountry, String lexMonth) {
 
 		return travelplanRepository.findTravelPlans(lexCountry);
 
 	}
 
-	/* Edited by Chaitrali */
+	/* Edited by Sravani */
 	public Travelplan findTravelPlanByName(String planName) {
 
 		return travelplanRepository.findTravelPlanByPlanName(planName);

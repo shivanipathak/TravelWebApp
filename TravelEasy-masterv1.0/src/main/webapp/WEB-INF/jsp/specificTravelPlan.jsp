@@ -59,6 +59,13 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
+#h1 {
+  font-size: 40px;
+  font-style: italic;
+  color: white;
+}
+
+
 /* Style the container/contact section */
 .container {
     border-radius: 5px;
@@ -97,7 +104,7 @@ input[type=submit]:hover {
 	</form>
 	</div>
 
-${message1}
+<div><h1 style="color:white;font-size: 40px;font-style: italic;border: solid;width: fit-content;">${message1}</h1></div>
 <div class="container">
   <div style="text-align:center">
 
@@ -123,7 +130,7 @@ ${message1}
 <%-- <button type="submit" id="getreviews" class="getreviews" onClick="getreviews('${SpecificTravelPlan.plan}')" >Reviews</button>
 <div id="displayreviews"></div> --%>
 
- <a href="/getReviews?plan=${SpecificTravelPlan.plan}"><h4><strong><font color= "black" style="margin-left: 690px" >Show Reviews</font></strong></h4></a>
+ <a href="/getReviews?plan=${SpecificTravelPlan.plan}"><h4><strong><font color= "black" style="align:center;" >Reviews</font></strong></h4></a>
     
      <% 
  if(session.getAttribute("planReview") != null)

@@ -18,9 +18,9 @@ Students:
 
 [Anvitha Shubhaveer Jain](https://www.linkedin.com/in/anvitha-jain-98170a10b/)
 
-[Chaitrali Deshmukh](https://www.linkedin.com/in/chaitrali-deshmukh-8610a9176/)
+[Sravani Deshmukh](https://www.linkedin.com/in/Sravani-deshmukh-8610a9176/)
 
-[Prathyusha Kasibhatta](https://www.linkedin.com/in/prathyusha-kasibhatta-5b39ab169/)
+[Shivani Kasibhatta](https://www.linkedin.com/in/Shivani-kasibhatta-5b39ab169/)
 
 [Saylee Vyawahare](https://www.linkedin.com/in/saylee-vyawahare-51b59188/)
 

@@ -14,14 +14,14 @@ import com.traveleasy.model.Travelplan;
 public interface TravelplanRepository extends JpaRepository<Travelplan,Integer>{
 	
 	
-	/*Edited by Chaitrali*/
+	/*Edited by Sravani*/
 	@Query("Select t FROM Travelplan t WHERE LOWER(t.country) = LOWER(:lexCountry) AND LOWER(t.month) = LOWER(:lexMonth)")
 	public List<Travelplan> findTravelPlans(@Param("lexCountry") String lexCountry, @Param("lexMonth") String lexMonth);
 	
 	@Query("Select t FROM Travelplan t WHERE LOWER(t.country) = LOWER(:lexCountry)")
 	public List<Travelplan> findTravelPlans(@Param("lexCountry") String lexCountry);
 	
-	/*Edited by Chaitrali*/
+	/*Edited by Sravani*/
 	@Query("Select t FROM Travelplan t WHERE LOWER(t.plan) = LOWER(:planName)")
 	public Travelplan findTravelPlanByPlanName(@Param("planName") String planName);
 	

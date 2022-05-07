@@ -43,10 +43,6 @@ input[type=text], select {
     text-align: center;
     
 }
-.prediction {
-float: right;
-margin-right: 5%;
-}
 label {
   display: inline-block;
   width: 140px;
@@ -139,9 +135,7 @@ div.desc {
 				<button type="submit">Submit</button>
 		</form>		
 	</div>
-	<!--  <div class="prediction">
-	<button type="submit"><a target="_blank" href="prediction">Predict</a></button>
-	</div>-->
+
 	<div class="companytravelplans">
 			<form method="POST" action="/companytravelplans">
 		<input type="hidden" name="companyname" value="${companyname}">

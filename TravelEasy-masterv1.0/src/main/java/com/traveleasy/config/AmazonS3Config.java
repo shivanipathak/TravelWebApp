@@ -42,11 +42,12 @@ public class AmazonS3Config {
 	    public String getEndPointURL() {
 	        return endpointUrl;
 	    }
-
+	    
 	    @Bean(name = "awsRegion")
-	    public Region getAWSPollyRegion() {
+	    public Region getAWSRegion() {
 	        return Region.getRegion(Regions.fromName(awsRegion));
 	    }
+
 
 	    @Bean(name = "awsCredentialsProvider")
 	    public AWSCredentialsProvider getAWSCredentials() {

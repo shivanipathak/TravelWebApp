@@ -28,14 +28,12 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.traveleasy.client.ClientUtils;
 import com.traveleasy.model.Company;
 import com.traveleasy.model.LexUser;
-import com.traveleasy.model.Prediction;
 import com.traveleasy.model.Reviews;
 import com.traveleasy.model.Travelplan;
 import com.traveleasy.model.User;
 import com.traveleasy.model.Usertravelplan;
 import com.traveleasy.service.AmazonClientService;
 import com.traveleasy.service.CompanyService;
-import com.traveleasy.service.PredictionService;
 import com.traveleasy.service.SignUpService;
 import com.traveleasy.service.UserService;
 
@@ -55,10 +53,6 @@ public class HomeController {
 	private UserService userService;
 	
 	
-//	@Autowired
-//	private PollyHelper pollyhelper;
-	
-	private PredictionService predictionService;
 
 	// @Autowired
 	// ClientUtils clientUtils;
@@ -71,7 +65,7 @@ public class HomeController {
 			
 	
 	
-     /* added by chaitrali */
+     /* added by Sravani */
 	@GetMapping("/getData")
 	public String getData(HttpSession session, ModelMap model) {
 		String custId = (String) session.getAttribute("DynamoUser");
@@ -111,7 +105,7 @@ public class HomeController {
 	
 		
 		
-		/* 4 Dec by chaitrali*/
+		/* 4 Dec by Sravani*/
 		if (Travelplans.isEmpty())
 		{
 			System.out.println("Hey are you coming in error page??????");
@@ -128,7 +122,7 @@ public class HomeController {
 	}
 	
 	
-	/* 4 Dec by chaitrali*/
+	/* 4 Dec by Sravani*/
 	@GetMapping("/errorPage")
 	public String errorPage() {
 		return "errorPage";
@@ -473,7 +467,7 @@ public class HomeController {
 } 
 	
 	
-	/*Edited by Prathyusha on 5th */
+	/*Edited by Shivani on 5th */
 	@PostMapping("/travelplandelete")
 	public String deleteCompanyTravelplan(@RequestParam(value = "companyname") String companyname,
 			@RequestParam("companyusername") String companyusername,
@@ -490,58 +484,9 @@ public class HomeController {
 		return "redirect:/companyPage";
 	}
 	
-//	 @RequestMapping(path="/audio", produces="audio/mpeg3")
-//     public @ResponseBody byte[] textToSpeech(@RequestParam("msg") String msg) throws IOException {
-//                 InputStream is = pollyhelper.synthesize(msg, OutputFormat.Mp3);
-//                 
-//                  return StreamUtils.copyToByteArray(is);
-//     }
-	  @Autowired
-	    public void PredictionController(PredictionService predictionService) {
-	        this.predictionService = predictionService;
-	    }
-	    
-	   
-	    private Prediction createPrediction(String country,String month,String budget1) {
-	        ObjectMapper mapper = new ObjectMapper();
-	        String predictionJson = getPredictionJson(country,month,budget1);
-System.out.println(predictionJson);
-	        Prediction prediction = null;
-	        try {
-	        	prediction = mapper.readValue(predictionJson, Prediction.class);
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
 
-	        return prediction;
-	    }
-	    
-	    
-	    /* Edited by Prathyusha */
-	    @RequestMapping(value = "/prediction")
-	    public String getPredication(@RequestParam("country") String country,@RequestParam("month") String month,
-	    		@RequestParam("budget") String budget,HttpSession session) {
-	    	String budget1 = '$'+ budget;
-	    	System.out.println(budget1);
-	        Optional result = predictionService.getPrediction(createPrediction(country,month,budget1));
-	        Optional result1 = predictionService.getPrediction1(createPrediction(country,month,budget1));
-	        if (result.isPresent() && result1.isPresent()) {
-	        	session.setAttribute("negative",  String.format("%.0f", (Float) result.get() * 100));
-	        	session.setAttribute("positive",  String.format("%.0f", (Float) result1.get() * 100));
-	            return "redirect:/prediction";
-	        }
-	        System.out.println("error");
-	        session.setAttribute("companymessage", "Error when calculate probability of response");
-	        return "redirect:/prediction";
-	    }
-	    
-	    
-
-	    private String getPredictionJson(String country,String month,String budget1) {
-	    	return "{\"country\":\""+ country +"\",\"month\":\"jan\",\"budget\":\""+ budget1 +"\"}";
-	    }
-
-	    /*Edited By Chaitrali*/
+	 
+	    /*Edited By Sravani*/
 	    @GetMapping("/downloadTravelPlanItinerary")
 	    private ResponseEntity downloadTravelPlanItinerary(String itinerary, String companyname, String plan){
 	    	
@@ -591,7 +536,7 @@ System.out.println(predictionJson);
 	    
 	    
 
-		/* Edited by Prathyusha on 5th*/
+		/* Edited by Shivani on 5th*/
 		@PostMapping("/companytravelplans")
 		public String companyTravelplans(@RequestParam(value = "companyname") String companyname,
 				@RequestParam("companyusername") String companyusername, HttpSession session){
@@ -616,11 +561,7 @@ System.out.println(predictionJson);
 			}
 	    
 		
-		@GetMapping("/prediction")
-		public String prediction()
-		{
-			return "prediction";
-		}
+		
 		
 		
 		@GetMapping("/getReviews")
