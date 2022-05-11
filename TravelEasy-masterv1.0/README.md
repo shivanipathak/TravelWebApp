@@ -1,39 +1,31 @@
-# Travel Easy
+# Travel Planning System
 
 ## Introduction
  
-### Cloudproject2: Travelezy
-University Name: http://www.sjsu.edu/  
+### Cloud Final project: Travel Planning System
 
-Course: [Cloud Technologies ](http://info.sjsu.edu/web-dbgen/catalog/courses/CMPE281.html)
+University Name: https://www.csueastbay.edu/
 
-Professor: [Sanjay Garje ](https://www.linkedin.com/in/sanjaygarje/)
+Course: https://catalog.csueastbay.edu/preview_course_nopop.php?catoid=21&coid=82452
 
-ISA: [Anushri Srinath Aithal ](https://www.linkedin.com/in/anushri-aithal/)
-
+Professor: https://lwa1.csueastbay.edu/staffdir/index.cfm?ID=151159545252&n=230003000A_24120C0004080D08&Fuseaction=ShowDetails&MAXRECS=25
 
 Students:
 
-[Anand Muralidhara](https://www.linkedin.com/in/anandmuralidhara/)
-
-[Anvitha Shubhaveer Jain](https://www.linkedin.com/in/anvitha-jain-98170a10b/)
-
-[Sravani Deshmukh](https://www.linkedin.com/in/Sravani-deshmukh-8610a9176/)
-
-[Shivani Kasibhatta](https://www.linkedin.com/in/Shivani-kasibhatta-5b39ab169/)
-
-[Saylee Vyawahare](https://www.linkedin.com/in/saylee-vyawahare-51b59188/)
+Sravani Prakki
+Shivani Pathak
 
 
 ### Demo
-[Demo video Link](https://youtu.be/dKUfDHfROKw)
+[Demo video Link]()
 
 ### Project Problem Statement:
-“Live life with no excuses, travel with no regrets” – Oscar Wilde. Many travelers plan to travel different places around the world during different times of the year. Planning your travel is a major work. Once the traveler decides the location of his travel, he must check individually with each travel agency for itinerary and the budget. Which consumes lot of time. Due to which the user will end up visiting few websites. If more travel plans are available under single platform then there is exposure for various travel companies and their plans. 
+
+Planning a trip could be really stressful. Many of us cannot get over the anxiety of where to begin. Making travel arrangements, developing the itenary could be hectic. We try checking the budget and itinerary with different travel agencies. As it is hard to check all websites we end up visiting only a few. It would be really time saving if more travel plans are available on a single site based on our requirements with less effort. 
 
 ### Proposed Solution/Project Idea:
 
-Wouldn’t it be easier if somebody planned your trip? And all you must do is pack and leave. In this platform, just mention your specifications. To make this happen both users and travel agency will have to register with our platform. We are using AWS cloud services for developing and hosting a 3-Tier Web Application called Travelezy. It has role-based login for travel companies and travelers. The travel companies upload their itinerary after being a valid user. The travelers can register with the web application to view the travel plans which is matched for them by AWS Lex chatbot, taking traveler’s requirements to plan a travel.
+“Travel Planning system” (TPS) is a simple dynamic web application that is hosted on the AWS cloud platform. A new user/travel company can register on the website. The application is not only useful for travel lovers but many travel agencies themselves can also access this application. Login can be granted based on roles such as user or travel company. These login details are stored in an AWS RDS. Users can provide their travel requirements such as place of travel, their month of travel , preferred budget which are stored in AWS RDS. Travel companies can upload new itinerary details which are stored in the AWS S3 bucket. Registered users can provide feedback and post reviews which are also stored in AWS RDS and AWS S3 Bucket respectively.  An interactive chatbot is built using AWS Lex, AWS Lambda and AWS Cognito which takes the user’s travel preferences and provides them suitable itinerary plans. This application is hosted on AWS EBS which allows the application to be more scalable,  available and also provides data persistence and security to the application.
 
 ### Features List
 1.	New users are allowed to create new account using Sign up. A new user row/record is created in RDS. Sign up id restricted if registered user tries to sign up.
@@ -68,7 +60,7 @@ Company signup:
 
 Login Page:
 
- ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Lexchatbot.jpg)
+ ![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/login.png)
 
 
 
