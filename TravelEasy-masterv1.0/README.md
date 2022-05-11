@@ -8,7 +8,7 @@ University Name: [California State University East Bay](https://www.csueastbay.e
 
 Course: [Cloud Computing](https://catalog.csueastbay.edu/preview_course_nopop.php?catoid=21&coid=82452)
 
-Professor: 
+Professor:  [Babak Esmaeili csueb](https://lwa1.csueastbay.edu/staffdir/index.cfm?ID=151159545252&n=230003000A_24120C0004080D08&Fuseaction=ShowDetails&MAXRECS=25)
 
 Students:
 
@@ -17,7 +17,7 @@ Students:
 
 
 ### Demo
-[Demo video Link]()
+[Demo video Link](https://drive.google.com/file/d/1J0uQsMJ1a9K0QXDy53wHMIobihGiTJEO/view?usp=sharing)
 
 ### Project Problem Statement:
 
@@ -41,49 +41,41 @@ Planning a trip could be really stressful. Many of us cannot get over the anxiet
 ### Architecture Diagram
 ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Archirecture.png)
 
-
 ### Application Screenshots
 
-User signup:
+**User signup:**
 
  ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/UserSignup.jpg)
 
-
-Company signup:
+**Company signup:**
 
  ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/NewCompanySignup.jpg)
 
-
-Login Page:
+**Login Page:**
 
  ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/LoginPage.jpg)
 
-
-User Dashboard:
+**User Dashboard:**
 
 ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Userhomepage.jpg)
 
-
-User Lex bot:
+**User Lex bot:**
 
 ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Lexchatbot.jpg)
 
-
-Travel Plans:
+**Travel Plans:**
 
 ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/UserTravelplans.jpg)
 
-
-Specific travel plan:
+**Specific travel plan:**
 
 ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/SpecificTravelPlan.jpg)
 
-
-Company Dashboard:
+**Company Dashboard:**
 
 ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/companypage.jpg)
 
-Logout Page:
+**Logout Page:**
 
 ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Logout.jpg)
 
