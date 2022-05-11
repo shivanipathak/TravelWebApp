@@ -111,7 +111,7 @@ Planning a trip could be really stressful. Many of us cannot get over the anxiet
 4.	applications.properties should be changed with your MySQL URL, Username and Password.
 5.	application.properties should also be changed with your access key and secret.
 6.	For social logins update the developer account URL. 
-7.	Change credentials for machine learning and lex in code
+7.	Change credentials for lex in code
 8.	Run the instructions mvn clean and maven update
 9.	Then run application as java application
 10.	Application will be accessible for you  at http://localhost:8080/
