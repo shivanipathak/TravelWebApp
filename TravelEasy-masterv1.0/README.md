@@ -68,7 +68,7 @@ Company signup:
 
 Login Page:
 
- ![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/login.png)
+ ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Lexchatbot.jpg)
 
 
 
@@ -148,7 +148,3 @@ Machine learning analysis:
 8.	Run the instructions mvn clean and maven update
 9.	Then run application as java application
 10.	Application will be accessible for you  at http://localhost:8080/
-
-
-
-
