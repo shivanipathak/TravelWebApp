@@ -13,7 +13,7 @@ Professor:
 Students:
 
 - Sravani Prakki
-- Shivani Pathak
+- Shivani Pathak 
 
 
 ### Demo
@@ -29,105 +29,86 @@ Planning a trip could be really stressful. Many of us cannot get over the anxiet
 
 ### Features List
 
-1.	New users are allowed to create new account using Sign up. A new user row/record is created in RDS. Sign up id restricted if registered user tries to sign up.
-
-2.	Only allows users who are registered to login via Login Page. Authentication for username and password match is achieved. Role-based login is aided to redirect users to their respective pages.
-
-3.	Travel Companies can upload travel itinerary which includes photos, place, month of travel and budget.
-
-4.	User Dashboard page provides lex chatbot, which takes user requirements and to provide them with matching travel plan.
-5.	By using Amazon Lex and Polly our platform increases the user interaction.
-6.	Travel users Home Page displays all the travel images uploaded by Travel Companies. Images are displayed from CloudFront.
+1.	New users/New Travel company can sign up to create a new account within the website. In RDS, a new user row/record is created. The user/company login details are stored in AWS RDS.
+2.	The application only allows the users who are registered to login via user/company Login Page. Authentication is based on username and password match which is queried from AWS RDS tables. Role-based login is added to redirect users to their respective pages. Travel users/Travel companies need to select their user type and accordingly will be redirect to their respective pages.
+3.	Travel Companies can upload travel itinerary details such as photos, place, month of travel and budget.
+4.	User Dashboard page provides lex chatbot, which takes user preferences as input and provides them with best travel plan within the budget provided by the user. Users can also view/select plans that not suggested by Lex chatbot by clicking on submit button.
+5.	Our platform's user interaction is increased by using Amazon Lex chatbot.
+6.	Travel users Home Page displays all the travel images uploaded by Travel Companies.
 7.	Lex interacts with lambda to retrieve the travel plans uploaded by the company while matching it with the users input. 
 8.	Users can post review and photos for the travel plans they availed, which is stored in S3 bucket.
-9.	Machine learning predicts user’s interests based on the reviews provided by them, which in turn helps Travel Companies to modify their plans.
 
 ### Architecture Diagram
-![alt text]()
+![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Archirecture.png)
 
 
 ### Application Screenshots
 
 User signup:
 
- ![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/usersignup.png)
-
+ ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/UserSignup.jpg)
 
 
 Company signup:
 
- ![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/companysignup.png)
-
+ ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/NewCompanySignup.jpg)
 
 
 Login Page:
 
- ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Lexchatbot.jpg)
-
+ ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/LoginPage.jpg)
 
 
 User Dashboard:
 
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/userdashboard.png)
+![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Userhomepage.jpg)
 
 
 User Lex bot:
 
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/amazonlex.png)
+![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Lexchatbot.jpg)
 
 
 Travel Plans:
 
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/travelplans.png)
+![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/UserTravelplans.jpg)
 
 
 Specific travel plan:
 
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/specifictravelplan.png)
-
+![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/SpecificTravelPlan.jpg)
 
 
 Company Dashboard:
 
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/companydashboard.png)
+![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/companypage.jpg)
 
+Logout Page:
 
+![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Logout.jpg)
 
-Machine learning analysis:
-
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/machinelearning.png)
-
- 
 
 ### Pre-requisite Set Up
 
 #### Resources to be configured on AWS:
 
-1.	EC2, AutoScale Group
-2.	ELB
-3.	Route 53
-4.	S3, IA, Glacier
-5.	CloudFront
-6.	Elasticbeanstalk
-7.	Codepipeline
-8.	Codebuild
-9.	Amazon Machine Learning 
-10.	DynamoDB 
-11.	 RDS
-12.	Lambda 
-13.	Lex
-14.	Polly
-15.	Cloudwatch
-16.	CloudTrail 
-17.	SNS
-18.	IAM
-19.	API gateway
+
+1. ELB
+2. S3
+3. Elasticbeanstalk
+4. DynamoDB 
+5. RDS
+6. Lambda 
+7. Lex
+8. Cloudwatch
+9. IAM
+
 
 #### Softwares to download locally:
 
-1.	Server Side: Spring Boot, REST, Java, AWS Java SDK, Apache Tomcat
+1.	Server Side: Spring Boot, REST, Java, AWS Java SDK, Apache Tomcat, Python
 2.	Client Side: HTML5, JavaScript, Bootstrap, CSS
-3.	Database: RDS MySQL, Hibernate, DynamoDB
+3.	Database: RDS MySQL, Hibernate
 4.	Build Tool: Maven
 5.	Web Server: Apache Tomcat 8.5
 
