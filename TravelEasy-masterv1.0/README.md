@@ -4,16 +4,16 @@
  
 ### Cloud Final project: Travel Planning System
 
-University Name: https://www.csueastbay.edu/
+University Name: [California State University East Bay](https://www.csueastbay.edu/)
 
-Course: https://catalog.csueastbay.edu/preview_course_nopop.php?catoid=21&coid=82452
+Course: [Cloud Computing](https://catalog.csueastbay.edu/preview_course_nopop.php?catoid=21&coid=82452)
 
-Professor: https://lwa1.csueastbay.edu/staffdir/index.cfm?ID=151159545252&n=230003000A_24120C0004080D08&Fuseaction=ShowDetails&MAXRECS=25
+Professor: 
 
 Students:
 
-Sravani Prakki
-Shivani Pathak
+- Sravani Prakki
+- Shivani Pathak
 
 
 ### Demo
@@ -28,9 +28,13 @@ Planning a trip could be really stressful. Many of us cannot get over the anxiet
 “Travel Planning system” (TPS) is a simple dynamic web application that is hosted on the AWS cloud platform. A new user/travel company can register on the website. The application is not only useful for travel lovers but many travel agencies themselves can also access this application. Login can be granted based on roles such as user or travel company. These login details are stored in an AWS RDS. Users can provide their travel requirements such as place of travel, their month of travel , preferred budget which are stored in AWS RDS. Travel companies can upload new itinerary details which are stored in the AWS S3 bucket. Registered users can provide feedback and post reviews which are also stored in AWS RDS and AWS S3 Bucket respectively.  An interactive chatbot is built using AWS Lex, AWS Lambda and AWS Cognito which takes the user’s travel preferences and provides them suitable itinerary plans. This application is hosted on AWS EBS which allows the application to be more scalable,  available and also provides data persistence and security to the application.
 
 ### Features List
+
 1.	New users are allowed to create new account using Sign up. A new user row/record is created in RDS. Sign up id restricted if registered user tries to sign up.
+
 2.	Only allows users who are registered to login via Login Page. Authentication for username and password match is achieved. Role-based login is aided to redirect users to their respective pages.
+
 3.	Travel Companies can upload travel itinerary which includes photos, place, month of travel and budget.
+
 4.	User Dashboard page provides lex chatbot, which takes user requirements and to provide them with matching travel plan.
 5.	By using Amazon Lex and Polly our platform increases the user interaction.
 6.	Travel users Home Page displays all the travel images uploaded by Travel Companies. Images are displayed from CloudFront.
@@ -39,10 +43,8 @@ Planning a trip could be really stressful. Many of us cannot get over the anxiet
 9.	Machine learning predicts user’s interests based on the reviews provided by them, which in turn helps Travel Companies to modify their plans.
 
 ### Architecture Diagram
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/image.png)
+![alt text]()
 
-Code Pipeline
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/image%20(1).png)
 
 ### Application Screenshots
 
@@ -60,7 +62,7 @@ Company signup:
 
 Login Page:
 
- ![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/login.png)
+ ![alt text](https://github.com/shivanipathak/TravelWebApp/blob/Third-commit/TravelEasy-masterv1.0/Lexchatbot.jpg)
 
 
 
