@@ -85,15 +85,14 @@ Planning a trip could be really stressful. Many of us cannot get over the anxiet
 #### Resources to be configured on AWS:
 
 
-1. ELB
-2. S3
-3. Elasticbeanstalk
-4. DynamoDB 
-5. RDS
-6. Lambda 
-7. Lex
-8. Cloudwatch
-9. IAM
+1. S3
+2. Elasticbeanstalk
+3. DynamoDB 
+4. RDS
+5. Lambda 
+6. Lex
+7. Cloudwatch
+8. IAM
 
 
 #### Softwares to download locally:
@@ -108,7 +107,7 @@ Planning a trip could be really stressful. Many of us cannot get over the anxiet
 1.	Prerequisite Software: Java8 Runtime, Maven, Eclipse, MySQL 5.7.
 2.	Code is download from GitHub.
 3.	Use maven project in eclipse
-4.	applications.properties should be changed with your MySQL URL, Username and Password.
+4.	applications.properties should be changed with your AWS RDS URL, Username and Password.
 5.	application.properties should also be changed with your access key and secret.
 6.	For social logins update the developer account URL. 
 7.	Change credentials for lex in code
