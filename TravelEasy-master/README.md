@@ -2,31 +2,14 @@
 
 ## Introduction
  
-### Cloudproject2: Travelezy
-University Name: http://www.sjsu.edu/  
-
-Course: [Cloud Technologies ](http://info.sjsu.edu/web-dbgen/catalog/courses/CMPE281.html)
-
-Professor: [Sanjay Garje ](https://www.linkedin.com/in/sanjaygarje/)
-
-ISA: [Anushri Srinath Aithal ](https://www.linkedin.com/in/anushri-aithal/)
 
 
 Students:
 
-[Anand Muralidhara](https://www.linkedin.com/in/anandmuralidhara/)
-
-[Anvitha Shubhaveer Jain](https://www.linkedin.com/in/anvitha-jain-98170a10b/)
-
-[Chaitrali Deshmukh](https://www.linkedin.com/in/chaitrali-deshmukh-8610a9176/)
-
-[Prathyusha Kasibhatta](https://www.linkedin.com/in/prathyusha-kasibhatta-5b39ab169/)
-
-[Saylee Vyawahare](https://www.linkedin.com/in/saylee-vyawahare-51b59188/)
+Sravani Prakki
+Shivani Pathak
 
 
-### Demo
-[Demo video Link](https://youtu.be/dKUfDHfROKw)
 
 ### Project Problem Statement:
 “Live life with no excuses, travel with no regrets” – Oscar Wilde. Many travelers plan to travel different places around the world during different times of the year. Planning your travel is a major work. Once the traveler decides the location of his travel, he must check individually with each travel agency for itinerary and the budget. Which consumes lot of time. Due to which the user will end up visiting few websites. If more travel plans are available under single platform then there is exposure for various travel companies and their plans. 
@@ -46,64 +29,9 @@ Wouldn’t it be easier if somebody planned your trip? And all you must do is pa
 8.	Users can post review and photos for the travel plans they availed, which is stored in S3 bucket.
 9.	Machine learning predicts user’s interests based on the reviews provided by them, which in turn helps Travel Companies to modify their plans.
 
-### Architecture Diagram
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/image.png)
-
-Code Pipeline
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/image%20(1).png)
-
-### Application Screenshots
-
-User signup:
-
- ![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/usersignup.png)
 
 
 
-Company signup:
-
- ![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/companysignup.png)
-
-
-
-Login Page:
-
- ![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/login.png)
-
-
-
-User Dashboard:
-
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/userdashboard.png)
-
-
-User Lex bot:
-
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/amazonlex.png)
-
-
-Travel Plans:
-
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/travelplans.png)
-
-
-Specific travel plan:
-
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/specifictravelplan.png)
-
-
-
-Company Dashboard:
-
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/companydashboard.png)
-
-
-
-Machine learning analysis:
-
-![alt text](https://github.com/AnandMuralidhar/TravelEasy/blob/master/machinelearning.png)
-
- 
 
 ### Pre-requisite Set Up
 
@@ -137,17 +65,7 @@ Machine learning analysis:
 4.	Build Tool: Maven
 5.	Web Server: Apache Tomcat 8.5
 
-### Deployment Instructions on Local
-1.	Prerequisite Software: Java8 Runtime, Maven, Eclipse, MySQL 5.7.
-2.	Code is download from GitHub.
-3.	Use maven project in eclipse
-4.	applications.properties should be changed with your MySQL URL, Username and Password.
-5.	application.properties should also be changed with your access key and secret.
-6.	For social logins update the developer account URL. 
-7.	Change credentials for machine learning and lex in code
-8.	Run the instructions mvn clean and maven update
-9.	Then run application as java application
-10.	Application will be accessible for you  at http://localhost:8080/
+
 
 
 
