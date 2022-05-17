@@ -1,4 +1,4 @@
-# Travel Easy
+# Travel Planning System
 
 ## Introduction
  
